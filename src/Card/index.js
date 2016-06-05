@@ -2,13 +2,13 @@ import React, {PropTypes, Component} from 'react'
 
 export default class Card extends Component {
   render () {
-    const { message, fullname, username } = this.props
+    const { avatar, message, fullname, username } = this.props
     return (
       <div className='column col-4'>
         <div className='card'>
           <div className='card-header'>
             <figure className='avatar avatar-lg'>
-              <img src='https://picturepan2.github.io/spectre/demo/img/avatar-1.png' />
+              <img src={avatar} />
             </figure>
             <h4 className='card-title'>{fullname}</h4>
             <h6 className='card-meta'>{username}</h6>
@@ -30,4 +30,8 @@ Card.PropTypes = {
   username: PropTypes.string,
   avatar: PropTypes.string,
   message: PropTypes.string
+}
+
+Card.defaultProps = {
+  avatar: 'https://picturepan2.github.io/spectre/demo/img/avatar-1.png'
 }
