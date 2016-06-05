@@ -1,8 +1,7 @@
-import expect from 'expect'
-import { add } from '../src'
+import { expect } from 'chai'
 
-describe('add', () => {
-  it('should add 2 and 2', () => {
-    expect(add(2, 2)).toBe(4)
+describe('boilerplate test', () => {
+  it('boilerplate test', () => {
+    expect(true).to.be.eql(true)
   })
 })

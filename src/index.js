@@ -1,3 +1,2 @@
-export function add (x, y) {
-  return x + y
-}
+import Card from './Card'
+export {Card}
