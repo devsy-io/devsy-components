@@ -19,9 +19,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'devsy-components': path.join(__dirname, '..', '..', 'src')
+      'devsy-components': path.join(__dirname, '..', '..', 'lib')
     },
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.scss']
   },
   module: {
     loaders: [{
@@ -32,7 +32,12 @@ module.exports = {
     }, {
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, '..', '..', 'src')
+      include: path.join(__dirname, '..', '..', 'lib')
+    }, {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'sass'],
+      exclude: /node_modules/,
+      include: __dirname
     }]
   }
 }
