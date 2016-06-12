@@ -1,0 +1,22 @@
+.card {
+  .avatar {
+    float: left;
+    margin-right: 15px;
+  }
+  .card-title {
+    padding-top: 5px;
+  }
+  .card-code {
+
+  }
+  .btn {
+    color: #555;
+    padding: 0;
+    border: 0;
+    margin-right: 20px;
+    &:hover {
+      color: #000;
+      background: transparent;
+    }
+  }
+}

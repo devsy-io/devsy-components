@@ -1,4 +1,6 @@
 import React, {PropTypes, Component} from 'react'
+import Button from '../Button'
+import Avatar from '../Avatar'
 
 export default class Card extends Component {
   render () {
@@ -7,14 +9,13 @@ export default class Card extends Component {
       <div className='column col-4'>
         <div className='card'>
           <div className='card-header'>
-            <figure className='avatar avatar-lg'>
-              <img src={avatar} />
-            </figure>
+            <Avatar img={avatar} size={'l'}/>
             <h4 className='card-title'>{fullname}</h4>
             <h6 className='card-meta'>{username}</h6>
           </div>
           <div className='card-body'>{message}</div>
           <div className='card-footer'>
+            <Button />
             <button className='btn lnr lnr-bubble'></button>
             <button className='btn lnr lnr-heart'></button>
             <button className='btn lnr lnr-code'></button>

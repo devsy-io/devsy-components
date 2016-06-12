@@ -1,4 +1,7 @@
+import Avatar from './Avatar'
+import Button from './Button'
 import Card from './Card'
+
 import './index.scss'
 
-export {Card}
+export {Avatar, Button, Card}

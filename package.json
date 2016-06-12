@@ -9,6 +9,7 @@
     "lib": "npm run lib:scss && npm run lib:js",
     "lib:js": "babel src --out-dir lib",
     "lib:scss": "copyfiles -u 1 './src/**/*.scss' lib",
+    "lib:js:watch": "npm run lib:js -- -w",
     "build:umd": "npm run build && npm run build:prod",
     "build": "NODE_ENV=production webpack",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.prod.babel.js",
