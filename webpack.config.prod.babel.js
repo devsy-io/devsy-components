@@ -16,6 +16,10 @@ export default {
       exclude: /node_modules/
     }]
   },
+  exterals: {
+    'react': 'react',
+    'react-dom': 'react-dom'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'devsy-components.min.js',

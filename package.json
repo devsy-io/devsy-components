@@ -56,7 +56,8 @@
   },
   "dependencies": {
     "invariant": "^2.0.0",
-    "react": "^15.1.0"
+    "react": "^15.1.0",
+    "react-syntax-highlighter": "^2.1.0"
   },
   "standard": {
     "globals": [
