@@ -21,7 +21,8 @@
   "globals": {
     "document": false,
     "navigator": false,
-    "window": false
+    "window": false,
+    "React": false
   },
 
   "rules": {

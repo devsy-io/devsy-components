@@ -1,0 +1,30 @@
+.avatar {
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 3.2rem;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 3.2rem;
+
+  &.avatar--xs {
+    font-size: .8rem;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  &.avatar--l {
+    font-size: 2rem;
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+  }
+}

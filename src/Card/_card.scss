@@ -1,22 +1,43 @@
+$card-background-color: #fff;
+$card-border-color: #eee;
+$card-buttons-color: #555;
+$card-buttons-hover-color: #000;
+
 .card {
+  background: $card-background-color;
+  border: .1rem solid $card-border-color;
+  border-radius: .3rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  z-index: 999;
+  &-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+  &-body {
+    padding: 1.5rem 1.5rem 0;
+  }
+  &-footer {
+    padding: 1.5rem 1.5rem 0;
+  }
+  &-title {
+    padding-top: 5px;
+  }
+  &-code {
+
+  }
   .avatar {
     float: left;
     margin-right: 15px;
   }
-  .card-title {
-    padding-top: 5px;
-  }
-  .card-code {
-
-  }
   .btn {
-    color: #555;
+    color: $card-buttons-color;
     padding: 0;
     border: 0;
     margin-right: 20px;
     &:hover {
-      color: #000;
-      background: transparent;
+      color: $card-buttons-hover-color;
     }
   }
 }
