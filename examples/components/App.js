@@ -58,7 +58,7 @@ const sample = [{
 export default () => {
   return (
     <div>
-      {sample.map(tweet => <Card {...tweet} />)}
+      {sample.map((tweet, index) => <Card {...tweet} key={index} />)}
     </div>
   )
 }

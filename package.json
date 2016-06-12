@@ -11,11 +11,12 @@
     "lib:scss": "copyfiles -u 1 './src/**/*.scss' lib",
     "lib:js:watch": "npm run lib:js -- -w",
     "build:umd": "npm run build && npm run build:prod",
-    "build": "NODE_ENV=production webpack",
+    "build": "NODE_ENV=production webpack --config webpack.config.base.babel.js",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.prod.babel.js",
     "lint": "standard --verbose | ./node_modules/.bin/snazzy",
     "test": "NODE_ENV=test mocha",
     "test:watch": "NODE_ENV=test mocha --watch",
+    "start": "webpack-dev-server --config webpack.config.dev.babel.js",
     "prepublish": "npm run lint && npm run test && npm run clean && npm run build && npm run build:umd"
   },
   "repository": {
@@ -44,20 +45,22 @@
     "enzyme": "^2.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "mocha": "^2.2.5",
+    "node-libs-browser": "^1.0.0",
     "node-sass": "^3.7.0",
     "react-addons-test-utils": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react-hot-loader": "^1.2.7",
     "rimraf": "^2.3.4",
     "sass-loader": "^3.2.0",
     "snazzy": "^4.0.0",
     "standard": "^7.1.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.9.6",
-    "webpack-dev-server": "^1.8.2"
+    "webpack-dev-server": "^1.9.0",
+    "webpack": "^1.9.11"
   },
   "dependencies": {
     "invariant": "^2.0.0",
     "react": "^15.1.0",
+    "react-dom": "^15.1.0",
     "react-syntax-highlighter": "^2.1.0"
   },
   "standard": {
