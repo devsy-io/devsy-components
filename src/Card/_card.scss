@@ -4,26 +4,28 @@ $card-buttons-color: #555;
 $card-buttons-hover-color: #000;
 $card-meta-color: #b3b3b3;
 
+$card-sections-padding: 1.5rem 1.5rem 0;
+
 .card {
   background: $card-background-color;
   border: .1rem solid $card-border-color;
   border-radius: .3rem;
   display: block;
-  margin: 0;
+  margin: 0 0 1.5rem;
   padding: 0;
   text-align: left;
   z-index: 999;
 
   &-header {
-    padding: 1.5rem 1.5rem 0;
+    padding: $card-sections-padding;
   }
 
   &-body {
-    padding: 1.5rem 1.5rem 0;
+    padding: $card-sections-padding;
   }
 
   &-footer {
-    padding: 1.5rem 1.5rem 0;
+    padding: $card-sections-padding;
   }
 
   &-title {
@@ -47,7 +49,7 @@ $card-meta-color: #b3b3b3;
 
   .avatar {
     float: left;
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   .btn {
