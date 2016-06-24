@@ -6,7 +6,7 @@ import Avatar from '../Avatar'
 
 export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
   return (
-    <div className='card'>
+    <article className='card'>
       <header className='card-header'>
         <Avatar img={avatar} size={'l'} />
         <h4 className='card-title'>{fullname}</h4>
@@ -22,7 +22,7 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         <button className='btn lnr lnr-heart'></button>
         <button className='btn lnr lnr-code'></button>
       </footer>
-    </div>
+    </article>
   )
 }
 
