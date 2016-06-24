@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 
-const Theme = (props) => {
+export default function Theme (props) {
   return (
     <div className='theme'>
       {props.children}
@@ -11,5 +11,3 @@ const Theme = (props) => {
 Theme.propTypes = {
   children: PropTypes.array
 }
-
-export default Theme
