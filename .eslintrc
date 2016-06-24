@@ -15,7 +15,12 @@
 
   "plugins": [
     "standard",
-    "promise"
+    "promise",
+    "react"
+  ],
+
+  "extends": [
+    "standard-jsx"
   ],
 
   "globals": {
@@ -145,6 +150,12 @@
     "standard/array-bracket-even-spacing": [2, "either"],
     "standard/computed-property-even-spacing": [2, "even"],
 
-    "promise/param-names": 2
+    "promise/param-names": 2,
+
+    "react/jsx-no-bind": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2
   }
 }

@@ -1,38 +1,35 @@
-import React, {PropTypes, Component} from 'react'
+import React, {PropTypes} from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/styles'
 import Button from '../Button'
 import Avatar from '../Avatar'
 
-export default class Card extends Component {
-  render () {
-    const { avatar, message, fullname, username, snippet = {} } = this.props
-    return (
-      <div className='card'>
-        <div className='card-header'>
-          <Avatar img={avatar} size={'l'} />
-          <h4 className='card-title'>{fullname}</h4>
-          <h6 className='card-meta'>{username}</h6>
-        </div>
-        <div className='card-body'>{message}</div>
-        <SyntaxHighlighter language={snippet.language} style={docco}>
-          {snippet.code}
-        </SyntaxHighlighter>
-        <div className='card-footer'>
-          <Button />
-          <button className='btn lnr lnr-bubble'></button>
-          <button className='btn lnr lnr-heart'></button>
-          <button className='btn lnr lnr-code'></button>
-        </div>
-      </div>
-    )
-  }
+export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
+  return (
+    <article className='card'>
+      <header className='card-header'>
+        <Avatar img={avatar} size={'l'} />
+        <h4 className='card-title'>{fullname}</h4>
+        <h6 className='card-meta'>{username}</h6>
+      </header>
+      <section className='card-body'>{message}</section>
+      <SyntaxHighlighter language={snippet.language} style={docco}>
+        {snippet.code}
+      </SyntaxHighlighter>
+      <footer className='card-footer'>
+        <Button />
+        <button className='btn lnr lnr-bubble'></button>
+        <button className='btn lnr lnr-heart'></button>
+        <button className='btn lnr lnr-code'></button>
+      </footer>
+    </article>
+  )
 }
 
-Card.PropTypes = {
+Card.propTypes = {
+  avatar: PropTypes.string,
   fullname: PropTypes.string,
   username: PropTypes.string,
-  avatar: PropTypes.string,
   message: PropTypes.string,
   snippet: PropTypes.shape({
     language: PropTypes.string,
