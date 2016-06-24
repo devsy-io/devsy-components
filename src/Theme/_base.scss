@@ -66,6 +66,11 @@ h6 {
   font-size: 1.6rem;
 }
 
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
 // Disabled state
 &[disabled],
 .disabled {
