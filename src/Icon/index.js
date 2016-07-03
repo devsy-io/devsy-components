@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react'
 
-export default function Icon ({name, className}) {
+export default function Icon ({name, className = ''}) {
+  const classes = `icon i-${name} ${className}`
+  const href = `#i-${name}`
   return (
-    <svg role='img' className={`i-${name} ${className || ''}`}>
-      <use xlinkHref={`#i-${name}`}></use>
+    <svg role='img' className={classes}>
+      <use xlinkHref={href}></use>
     </svg>
   )
 }

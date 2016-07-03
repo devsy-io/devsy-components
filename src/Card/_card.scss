@@ -50,11 +50,13 @@ $card-sections-padding: $card-value-padding $card-value-padding 0;
     margin-right: 20px;
   }
 
-  .btn {
+  .button {
     border: 0;
     color: $card-buttons-color;
+    height: 25px;
     margin-right: 20px;
     padding: 0;
+    width: 25px;
 
     &:hover {
       color: $card-buttons-hover-color;
