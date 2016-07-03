@@ -3,6 +3,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/styles'
 import Button from '../Button'
 import Avatar from '../Avatar'
+import Icon from '../Icon'
 
 export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
   return (
@@ -17,10 +18,9 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         {snippet.code}
       </SyntaxHighlighter>
       <footer className='card-footer'>
-        <Button />
-        <button className='btn lnr lnr-bubble'></button>
-        <button className='btn lnr lnr-heart'></button>
-        <button className='btn lnr lnr-code'></button>
+        <Button>
+          <Icon name='like' />
+        </Button>
       </footer>
     </article>
   )

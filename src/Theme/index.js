@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react'
 
-export default function Theme (props) {
+export default function Theme ({children}) {
   return (
-    <div className='theme'>
-      {props.children}
+    <div>
+      {children}
     </div>
   )
 }
