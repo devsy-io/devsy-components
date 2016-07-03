@@ -18,9 +18,9 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         {snippet.code}
       </SyntaxHighlighter>
       <footer className='card-footer'>
-        <Button>
-          <Icon name='like' />
-        </Button>
+        <Button><Icon name='like' /></Button>
+        <Button><Icon name='star' /></Button>
+        <Button><Icon name='share' /></Button>
       </footer>
     </article>
   )
