@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, IconSprite, Theme } from 'devsy-components'
+import { Avatar, Card, IconSprite, Theme } from 'devsy-components'
 
 const sample = [{
   fullname: 'Miguel Ángel',
@@ -58,6 +58,13 @@ const sample = [{
 export default () => {
   return (
     <Theme>
+      <h4>Avatars</h4>
+      <Avatar size='xs' />
+      <Avatar size='s' />
+      <Avatar size='m' />
+      <Avatar size='l' />
+      <Avatar size='xl' />
+      <h4>Cards</h4>
       {sample.map((tweet, index) => <Card {...tweet} key={index} />)}
       <IconSprite />
     </Theme>

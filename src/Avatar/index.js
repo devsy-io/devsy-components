@@ -10,7 +10,8 @@ const Avatar = (props) => {
 }
 
 Avatar.propTypes = {
-  image: PropTypes.string.isRequired
+  image: PropTypes.string.isRequired,
+  size: PropTypes.string
 }
 
 Avatar.defaultProps = {
