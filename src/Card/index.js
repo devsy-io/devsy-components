@@ -9,7 +9,7 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
   return (
     <article className='card'>
       <header className='card-header'>
-        <Avatar img={avatar} size={'l'} />
+        <Avatar image={avatar} size={'l'} />
         <h4 className='card-title'>{fullname}</h4>
         <h6 className='card-meta'>{username}</h6>
       </header>

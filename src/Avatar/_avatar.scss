@@ -1,3 +1,5 @@
+$avatar-background-color: #09f;
+$avatar-font-color: rgba(255, 255, 255, .7);
 $avatar-size-xs: 1.6rem;
 $avatar-size-s: 2.4rem;
 $avatar-size-m: 3.2rem;
@@ -5,11 +7,15 @@ $avatar-size-l: 4.8rem;
 $avatar-size-xl: 6.4rem;
 
 .avatar {
+  align-items: center;
+  background: $avatar-background-color;
   border-radius: 50%;
-  display: inline-block;
+  color: $avatar-font-color;
+  display: inline-flex;
   font-size: 1.6rem;
   font-weight: 300;
   height: $avatar-size-m;
+  justify-content: center;
   line-height: 1;
   margin: 0;
   position: relative;

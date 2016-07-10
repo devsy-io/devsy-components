@@ -1,22 +1,23 @@
 import React, {PropTypes} from 'react'
+import cx from 'classnames'
 
-const Avatar = (props) => {
-  const className = `avatar avatar--${props.size}`
+const Avatar = ({image, size, initials}) => {
+  const className = cx('avatar', {
+    [`avatar--${size}`]: size
+  })
+
   return (
     <figure className={className}>
-      <img src={props.image} />
+      {image && <img src={image} />}
+      {!image && initials && <span>{initials}</span>}
     </figure>
   )
 }
 
 Avatar.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  initials: PropTypes.string,
   size: PropTypes.string
-}
-
-Avatar.defaultProps = {
-  image: 'http://gravatar.com/avatar/ab1d28e0c265caf52e6f22b4b1e2ac98',
-  size: 's'
 }
 
 export default Avatar
