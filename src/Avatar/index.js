@@ -1,13 +1,16 @@
 import React, {PropTypes} from 'react'
 import cx from 'classnames'
 
+const className = 'avatar'
+
 const Avatar = ({image, size, initials}) => {
-  const className = cx('avatar', {
-    [`avatar--${size}`]: size
+  const classes = cx(className, {
+    [`${className}--${size}`]: size,
+    [`${className}--no-img`]: !image && initials
   })
 
   return (
-    <figure className={className}>
+    <figure className={classes}>
       {image && <img src={image} />}
       {!image && initials && <span>{initials}</span>}
     </figure>
