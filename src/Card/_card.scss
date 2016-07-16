@@ -51,8 +51,7 @@ $card-sections-padding: $card-value-padding $card-value-padding 0;
   }
 
   .button {
-    border: 0;
-    color: $card-buttons-color;
+    fill: $card-buttons-color;
     height: 25px;
     margin-right: 20px;
     padding: 0;

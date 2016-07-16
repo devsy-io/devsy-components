@@ -1,0 +1,21 @@
+$strip-background-color: #fff;
+$strip-border-color: #ccc;
+
+.strip {
+  background: $strip-background-color;
+  border-left: $strip-border-color;
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+
+  .button-close {
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+  }
+}

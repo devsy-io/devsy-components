@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react'
 
 function emptyFn () {}
 
-export default function Button ({onClick, children}) {
+export default function Button ({children, className, onClick}) {
   return (
     <button
-      className='button'
+      className={`button ${className}`}
       onClick={onClick}>
       {children}
     </button>
@@ -14,10 +14,10 @@ export default function Button ({onClick, children}) {
 
 Button.propTypes = {
   children: PropTypes.node,
-  onClick: PropTypes.func
+  className: PropTypes.string,
+  onClick: PropTypes.func.isRequired
 }
 
 Button.defaultProps = {
-  children: null,
   onClick: emptyFn
 }
