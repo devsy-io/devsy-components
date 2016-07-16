@@ -1,9 +1,7 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/dist/styles'
-import Button from '../Button'
-import Avatar from '../Avatar'
-import Icon from '../Icon'
+import { Avatar, IconButton } from 'devsy-components'
 
 export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
   return (
@@ -18,9 +16,9 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         {snippet.code}
       </SyntaxHighlighter>
       <footer className='card-footer'>
-        <Button><Icon name='like' /></Button>
-        <Button><Icon name='star' /></Button>
-        <Button><Icon name='share' /></Button>
+        <IconButton icon='like' />
+        <IconButton icon='star' />
+        <IconButton icon='share' />
       </footer>
     </article>
   )

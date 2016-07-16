@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Avatar, Button, Card, Icon, IconSprite, Strip, Theme } from 'devsy-components'
+import { Avatar, Button, Card, IconSprite, Strip, Theme } from 'devsy-components'
 
 const sample = [{
   fullname: 'Miguel Ángel',

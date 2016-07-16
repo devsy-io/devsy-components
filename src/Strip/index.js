@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-import { Button, Icon } from 'devsy-components'
+import { IconButton } from 'devsy-components'
 
 function noop () {}
 
@@ -11,9 +11,7 @@ export default function Strip ({className, children, handleCloseButton, visible}
 
   return (
     <div className={classes}>
-      <Button className='button-close' onClick={handleCloseButton}>
-        <Icon name='x' />
-      </Button>
+      <IconButton icon='x' className='button-close' onClick={handleCloseButton} />
       {children}
     </div>
   )

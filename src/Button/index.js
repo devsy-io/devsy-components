@@ -3,9 +3,11 @@ import cx from 'classnames'
 
 function noop () {}
 
-export default function Button ({children, className, onClick}) {
-  const classes = cx('button', {
-    [className]: className
+export default function Button ({children, className, onClick, style}) {
+  const baseClass = 'button'
+  const classes = cx(baseClass, {
+    [className]: className,
+    [`${baseClass}-borderless`]: !style.border
   })
 
   return (
@@ -20,9 +22,15 @@ export default function Button ({children, className, onClick}) {
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  style: PropTypes.shape({
+    border: PropTypes.bool.isRequired
+  }).isRequired
 }
 
 Button.defaultProps = {
-  onClick: noop
+  onClick: noop,
+  style: {
+    border: true
+  }
 }
