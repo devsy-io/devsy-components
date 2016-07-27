@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-import { IconButton } from 'devsy-components'
+import IconButton from '../IconButton'
 
 function noop () {}
 

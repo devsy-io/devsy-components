@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react'
-import { Avatar, IconButton, SyntaxHighlighter } from 'devsy-components'
+import Avatar from '../Avatar'
+import IconButton from '../IconButton'
+import SyntaxHighlighter from '../SyntaxHighlighter'
 
 export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
   return (

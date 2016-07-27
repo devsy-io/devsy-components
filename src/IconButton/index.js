@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-import { Button, Icon } from 'devsy-components'
-
-function noop () {}
+import Button from '../Button'
+import Icon from '../Icon'
+import noop from '../utils/noop'
 
 export default function IconButton ({children, className, icon, onClick}) {
   const classes = cx('icon-button', {

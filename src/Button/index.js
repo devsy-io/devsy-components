@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-
-function noop () {}
+import noop from '../utils/noop'
 
 export default function Button ({children, className, onClick, style}) {
   const baseClass = 'button'
