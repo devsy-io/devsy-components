@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/styles'
+import SyntaxHighlighter from '../SyntaxHighlighter'
 import Button from '../Button'
 import Avatar from '../Avatar'
 
@@ -13,9 +12,9 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         <h6 className='card-meta'>{username}</h6>
       </header>
       <section className='card-body'>{message}</section>
-      <SyntaxHighlighter language={snippet.language} style={docco}>
-        {snippet.code}
-      </SyntaxHighlighter>
+      <SyntaxHighlighter
+        language={snippet.language}
+        snippet={snippet.code} />
       <footer className='card-footer'>
         <Button />
         <button className='btn lnr lnr-bubble'></button>

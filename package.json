@@ -1,6 +1,6 @@
 {
   "name": "devsy-components",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "UI components toolkit for devsy.io",
   "main": "lib/index.js",
   "scripts": {
@@ -59,9 +59,9 @@
   },
   "dependencies": {
     "invariant": "^2.0.0",
+    "lowlight": "^1.2.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-syntax-highlighter": "^2.1.0"
+    "react-dom": "^15.1.0"
   },
   "standard": {
     "globals": [
