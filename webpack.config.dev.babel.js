@@ -16,7 +16,7 @@ module.exports = {
     alias: {
       'devsy-components': SRC_PATH
     },
-    extensions: ['', '.js', '.scss']
+    extensions: ['', '.js', '.scss', '.svg']
   },
   module: {
     loaders: [{
@@ -26,6 +26,10 @@ module.exports = {
     }, {
       test: /\.js$/,
       loaders: ['babel'],
+      include: [APP_PATH, SRC_PATH]
+    }, {
+      test: /\.svg$/,
+      loaders: ['svg-inline'],
       include: [APP_PATH, SRC_PATH]
     }]
   },

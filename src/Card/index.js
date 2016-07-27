@@ -1,13 +1,11 @@
 import React, {PropTypes} from 'react'
-import SyntaxHighlighter from '../SyntaxHighlighter'
-import Button from '../Button'
-import Avatar from '../Avatar'
+import { Avatar, IconButton, SyntaxHighlighter } from 'devsy-components'
 
 export default function Card ({ avatar, message, fullname, username, snippet = {} }) {
   return (
     <article className='card'>
       <header className='card-header'>
-        <Avatar img={avatar} size={'l'} />
+        <Avatar image={avatar} size={'l'} />
         <h4 className='card-title'>{fullname}</h4>
         <h6 className='card-meta'>{username}</h6>
       </header>
@@ -16,10 +14,9 @@ export default function Card ({ avatar, message, fullname, username, snippet = {
         language={snippet.language}
         snippet={snippet.code} />
       <footer className='card-footer'>
-        <Button />
-        <button className='btn lnr lnr-bubble'></button>
-        <button className='btn lnr lnr-heart'></button>
-        <button className='btn lnr lnr-code'></button>
+        <IconButton icon='like' />
+        <IconButton icon='star' />
+        <IconButton icon='share' />
       </footer>
     </article>
   )

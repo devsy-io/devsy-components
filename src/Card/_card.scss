@@ -4,7 +4,9 @@ $card-buttons-color: #555;
 $card-buttons-hover-color: #000;
 $card-meta-color: #b3b3b3;
 
-$card-sections-padding: 1.5rem 1.5rem 0;
+$card-value-padding: 1.5rem;
+
+$card-sections-padding: $card-value-padding $card-value-padding 0;
 
 .card {
   background: $card-background-color;
@@ -12,7 +14,7 @@ $card-sections-padding: 1.5rem 1.5rem 0;
   border-radius: .3rem;
   display: block;
   margin: 0 0 1.5rem;
-  padding: 0;
+  padding: 0 0 1.5rem;
   text-align: left;
   z-index: 999;
 
@@ -48,11 +50,12 @@ $card-sections-padding: 1.5rem 1.5rem 0;
     margin-right: 20px;
   }
 
-  .btn {
-    border: 0;
-    color: $card-buttons-color;
+  .button {
+    fill: $card-buttons-color;
+    height: 25px;
     margin-right: 20px;
     padding: 0;
+    width: 25px;
 
     &:hover {
       color: $card-buttons-hover-color;

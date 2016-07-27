@@ -1,17 +1,29 @@
+$avatar-background-color: #09f;
+$avatar-font-color: rgba(255, 255, 255, .7);
 $avatar-size-xs: 1.6rem;
+$avatar-size-s: 2.4rem;
+$avatar-size-m: 3.2rem;
 $avatar-size-l: 4.8rem;
+$avatar-size-xl: 6.4rem;
 
 .avatar {
   border-radius: 50%;
-  display: inline-block;
-  font-size: 1.4rem;
+  color: $avatar-font-color;
+  display: inline-flex;
+  font-size: 1.6rem;
   font-weight: 300;
-  height: 3.2rem;
+  height: $avatar-size-m;
   line-height: 1;
   margin: 0;
   position: relative;
-  vertical-align: middle;
-  width: 3.2rem;
+  width: $avatar-size-m;
+
+  &.avatar--no-img {
+    align-items: center;
+    background: $avatar-background-color;
+    justify-content: center;
+    vertical-align: middle;
+  }
 
   &.avatar--xs {
     font-size: .8rem;
@@ -19,10 +31,22 @@ $avatar-size-l: 4.8rem;
     width: $avatar-size-xs;
   }
 
+  &.avatar--s {
+    font-size: 1rem;
+    height: $avatar-size-s;
+    width: $avatar-size-s;
+  }
+
   &.avatar--l {
     font-size: 2rem;
     height: $avatar-size-l;
     width: $avatar-size-l;
+  }
+
+  &.avatar--xl {
+    font-size: 2.6rem;
+    height: $avatar-size-xl;
+    width: $avatar-size-xl;
   }
 
   img {

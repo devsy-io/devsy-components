@@ -1,0 +1,23 @@
+$core-color: #09f;
+
+.button {
+  -webkit-appearance: none;
+  border: .1rem solid $core-color;
+  border-radius: .3rem;
+  color: $core-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 1.6rem;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &-borderless {
+    border: 0;
+  }
+}
