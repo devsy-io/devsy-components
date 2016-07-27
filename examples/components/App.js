@@ -1,32 +1,7 @@
 import React, { Component } from 'react'
 import { Avatar, Button, Card, IconSprite, Strip, Theme } from 'devsy-components'
-
-const sample = [{
-  fullname: 'Miguel Ángel',
-  username: '@midudev',
-  avatar: 'http://gravatar.com/avatar/ab1d28e0c265caf52e6f22b4b1e2ac98',
-  message: 'This is an example of tweet mesage talking about code.',
-  snippet: {
-    language: 'python',
-    code: `def openFile(path):
-file = open(path, "r")
-content = file.read()
-file.close()
-return content`
-  }
-}, {
-  fullname: 'Zeldman',
-  username: '@zedlman',
-  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg',
-  message: 'Javascript code to talk about! Amazing!',
-  snippet: {
-    language: 'js',
-    code: `var foo = 'bar'
-const sum = (a, b) => a + b;
-const total = sum(1, 3);
-return total`
-  }
-}]
+import timeline from './sample-data/timeline'
+import detail from './sample-data/detail'
 
 export default class App extends Component {
   constructor (...args) {
@@ -44,7 +19,6 @@ export default class App extends Component {
   }
 
   handleStripeCloseButton () {
-    console.log('hola')
     this.setState({stripIsVisible: false})
   }
 
@@ -56,7 +30,7 @@ export default class App extends Component {
         <Strip visible={this.state.stripIsVisible} handleCloseButton={this.handleStripeCloseButton}>
           <h1>Hola</h1>
           <h2>Contenido</h2>
-          <Card {...sample[0]} />
+          <Card {...detail} />
           <Avatar image='https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg' size='xs' />
         </Strip>
         <h4>Avatars</h4>
@@ -73,7 +47,7 @@ export default class App extends Component {
         <Avatar initials='DA' size='l' />
         <Avatar initials='AZ' size='xl' />
         <h4>Cards</h4>
-        {sample.map((tweet, index) => <Card {...tweet} key={index} />)}
+        {timeline.map((tweet, index) => <Card {...tweet} key={index} />)}
         <IconSprite />
       </Theme>
     )
