@@ -22,12 +22,12 @@ export default {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'devsy-components.min.js',
+    filename: 'index.min.js',
     library: 'devsy-components',
     libraryTarget: 'umd'
   },
   plugins: [
-    new ExtractTextPlugin('devsy-components.min.css'),
+    new ExtractTextPlugin('index.min.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
