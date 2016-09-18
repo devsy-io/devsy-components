@@ -1,5 +1,5 @@
 {
-  "name": "devsy-components",
+  "name": "@devsy-io/devsy-components",
   "version": "0.0.1",
   "description": "UI components toolkit for devsy.io",
   "main": "src",

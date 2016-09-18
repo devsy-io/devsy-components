@@ -1,0 +1,22 @@
+.common {
+  -webkit-appearance: none;
+  border: .1rem solid #09f;
+  border-radius: .3rem;
+  color: #09f;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 1.6rem;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.borderless {
+  composes: common;
+  border: 0;
+}
