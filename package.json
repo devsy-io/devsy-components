@@ -2,7 +2,7 @@
   "name": "@devsy-io/devsy-components",
   "version": "0.0.1",
   "description": "UI components toolkit for devsy.io",
-  "main": "src",
+  "main": "dist/",
   "scripts": {
     "phoenix": "rimraf node_modules && npm install",
     "clean": "rimraf lib dist coverage",
